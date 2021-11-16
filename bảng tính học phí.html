@@ -1,0 +1,66 @@
+<html>
+<head>
+ <meta name ="viewport" content="width=device-width,initial-scale=1.0">
+ <style>
+	  @media (min-width:700px) {
+	  h1::after{ content: "my first responsive wedsite " }
+	  }
+	  @media (min-width:px) {
+	  h1::before{ content: "responsive wedside" }
+	  p{display: none;}
+	  }
+	  </style>
+	  </head>
+<body>
+<script type ="text/javascript">
+	 document.addEventListener('DOMContentloaded',function()
+	 {
+
+		document.querySelector('#hocki').innerHTML=350000000;
+		document.querySelector('#sotiennha').onchange= function(){
+			document.querySelector('#hocki').innerHTML= this.value;
+		};
+
+	});
+	function TinhTong()
+	{
+    if (document.querySelector('#so_tien').value<=0){
+      alert('hãy nhập số tín');
+    }
+      else {
+
+
+	 let opt = document.querySelector("#sotientinchi").value;
+	 let so_tien = document.querySelector("#so_tien").value;
+	 document.querySelector("#sotin").innerHTML= opt*so_tien;
+}
+	}
+</script>
+
+<form action = "dulieuSV" method = "post">
+<table width="400" border="2" cellpadding="5" align="center">
+  <td> NHAP SO TIN </td>
+	<td>
+	   <input type = "text"id="so_tien">
+	  </td>
+	<tr>
+	   <td> số tiền </td>
+	   <td>
+		<select id= "sotientinchi" onchange="thayđoi()" >
+			<option value= "350000000"> HOC KI CHINH </option>
+			<option value= "365000000"> HOC KI HE </option>
+
+
+
+		</select>
+		  số tầng : <span id="hocki"></span>
+		   <br>
+       Học phí của sinh viên là (triệu vnd) : <span id = "sotin"> </span> <br>
+
+		   <input type = button id="thanhtien" value =" thành tiền " onclick="TinhTong()">
+	</tr>
+
+</table>
+</form>
+</body>
+</html>
